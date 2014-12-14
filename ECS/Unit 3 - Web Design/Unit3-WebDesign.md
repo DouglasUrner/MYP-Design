@@ -1,13 +1,5 @@
-ECS in MYP Design
-=================
-
-Ideas for how to align the ECS units with the MYP unit structure.
-
-# Unit 1: Human Computer Interaction
-
-# Unit 2: Problem Solving
-
-# Unit 3: Web Design
+Unit 3: Web Design
+==================
 
 ## Topic: The Web as A Means of Collaboration & Communication
 
@@ -45,17 +37,3 @@ Maybe the stuff below doesn't work… Too narrow.
 ### Key Concept: Communication
 
 ### Related Concepts: Form, Function
-
-# Unit 4: Programming
-
-# Unit 5: Data
-
-# Unit 6: Robotics
-
-## Topic:
-
-### Key Concept:
-
-### Related Concepts:
-
-### Global Context:
