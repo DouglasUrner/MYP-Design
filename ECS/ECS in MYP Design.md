@@ -11,15 +11,32 @@ Ideas for how to align the ECS units with the MYP unit structure.
 
 ## Topic: The Web as A Means of Collaboration & Communication
 
-Virtual communities across national and cultural boundaries.
+__Key Concept:__ Communities
 
-On the Internet no one knows that you're a dog.
+__Related Concepts:__ Innovation, Collaboration
 
-### Key Concept: Communities
+__Global Context:__ Scientific & Technical Innovation – The impact of scientific and technological advances on communities and environments.
 
-### Related Concepts: Innovation, Collaboration
+__Statement of Inquiry:__
+Communities on the Internet enable communication and collaboration across physical, political, and cultural boundaries.
 
-### Global Context: Scientific & Technical Innovation – The impact of scientific and technological advances on communities and environments.
+### Inquiry Questions
+
+Initial teacher developed questions:
+
+* __Factual:__
+ * What are the essential facilities that make online collaboration possible?
+ * What happens during an HTTP transaction?
+ * What is 'markup'?
+ * What are the major elements of an HTML document?
+* __Conceptual:__
+ * What is a community?
+ * Why does modern web design encourage a split between content (HTML) and style (CSS)?
+ * How has web design evolved?
+* __Debatable/provocative:__
+ * Are 'online communities' really communities?
+
+Student developed questions:
 
 Maybe the stuff below doesn't work… Too narrow.
 
