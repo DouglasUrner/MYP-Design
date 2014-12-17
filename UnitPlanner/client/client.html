@@ -3,11 +3,142 @@
 </head>
 
 <body>
-  {{> units_qf}}
+  {{> concepts_and_context}}
 </body>
 
-<template name='units_qf'>
-  {{> quickForm collection='Units' id='insertUnitForm' type='insert' template='bootstrap3'}}
+<template name='concepts_and_context'>
+  {{#autoForm id='units' type='insert' collection='Units'}}
+  <div class='container'>
+    <div class='panel-group' id='accordian'>
+
+      <div class='panel'>
+        <div class='panel-heading'>
+          <a data-toggle='collapse'
+            data-parent='#accordian' href='#collapse0'>
+            <label class='control-label'>
+              {{afFieldLabelText name='unit_title'}}:
+            </label>
+          </a>
+          <label class='control-label'>
+            {{currentFieldValue 'unit_title'}}
+          </label>
+          ({{currentFieldValue 'subject_group'}} /
+            {{currentFieldValue 'discipline'}}),
+          {{currentFieldValue 'faculty'}}
+      </div>
+      <div id='collapse0' class='panel-collapse collapse'>
+        <div class='panel-body'>
+          {{afFieldLabelText name='unit_title'}}:
+            {{> afFieldInput name='unit_title'}}
+          {{afFieldLabelText name='subject_group'}}:
+            {{> afFieldInput name='subject_group'}}
+          {{afFieldLabelText name='discipline'}}:
+            {{> afFieldInput name='discipline'}}
+          {{afFieldLabelText name='faculty'}}:
+            {{> afFieldInput name='faculty'}}
+          {{afFieldLabelText name='myp_year'}}:
+            {{> afFieldInput name='myp_year'}}
+          {{afFieldLabelText name='teaching_hours'}}:
+            {{> afFieldInput name='teaching_hours'}}
+        </div>
+      </div>
+    </div>
+
+      <div class='panel'>
+        <div class='panel-heading'>
+          <a data-toggle='collapse'
+            data-parent='#accordian' href='#collapse1'>
+            <label class='control-label'>
+              {{afFieldLabelText name='key_concept'}}:
+            </label>
+          </a> {{currentFieldValue 'key_concept'}}
+        </div>
+        <div id='collapse1' class='panel-collapse collapse'>
+          <div class='panel-body'>
+            {{> afFieldInput name='key_concept'}}
+          </div>
+        </div>
+      </div>
+
+      <div class='panel'>
+        <div class='panel-heading'>
+          <a data-toggle='collapse'
+            data-parent='#accordian' href='#collapse2'>
+            <label class='control-label'>
+              {{afFieldLabelText name='related_concepts'}}:
+            </label>
+          </a> {{currentFieldValue 'related_concepts'}}
+        </div>
+        <div id='collapse2' class='panel-collapse collapse'>
+          <div class='panel-body'>
+            {{> afFieldInput name='related_concepts'}}
+          </div>
+        </div>
+      </div>
+
+      <div class='panel'>
+        <div class='panel-heading'>
+          <a data-toggle='collapse'
+          data-parent='#accordian' href='#collapse3'>
+          <label class='control-label'>
+            {{afFieldLabelText name='global_context'}}:
+          </label>
+        </a> {{currentFieldValue 'global_context'}}
+      </div>
+      <div id='collapse3' class='panel-collapse collapse'>
+        <div class='panel-body'>
+          {{> afFieldInput name='global_context'}}
+        </div>
+      </div>
+    </div>
+
+    <div class='panel'>
+      <div class='panel-heading'>
+        <a data-toggle='collapse'
+          data-parent='#accordian' href='#collapse4'>
+          <label class='control-label'>
+            {{afFieldLabelText name='statement_of_inquiry'}}:
+          </label>
+        </a> {{currentFieldValue 'statement_of_inquiry'}}
+      </div>
+      <div id='collapse4' class='panel-collapse collapse'>
+        <div class='panel-body'>
+          {{> afFieldInput name='statement_of_inquiry'}}
+
+            {{> afArrayField name='factual_questions'}}
+            {{> afArrayField name='conceptual_questions'}}
+            {{> afArrayField name='debatable_questions'}}
+        </div>
+      </div>
+    </div>
+
+    <div class='panel'>
+      <div class='panel-heading'>
+        <a data-toggle='collapse'
+          data-parent='#accordian' href='#collapse5'>
+          <label class='control-label'>
+            {{afFieldLabelText name='summative_assessment'}}:
+          </label>
+        </a> {{currentFieldValue 'summative_assessment'}}
+      </div>
+      <div id='collapse5' class='panel-collapse collapse'>
+        <div class='panel-body'>
+          {{> afFieldInput name='summative_assessment'}}
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">
+      Add Unit</button>
+    <button type="reset" class="btn btn-default">
+      Reset Form
+    </button>
+  </div>
+  {{/autoForm}}
 </template>
 
 <template name='units'>
@@ -29,7 +160,7 @@
   <div class="form-group
     {{#if afFieldIsInvalid name='key_concept'}}has-error{{/if}}">
     <label class="control-label">
-      {{afFieldLabelText name='key_concept'}}
+      {{afFieldLabelText name='key_concept'}}: {{currentFieldValue name='key_concept'}}
     </label>
     {{> afFieldInput name='key_concept'}}
     {{#if afFieldIsInvalid name='key_concept'}}

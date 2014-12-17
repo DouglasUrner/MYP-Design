@@ -5,11 +5,26 @@ Schemas = {};
 //Template.registerHelper('Schemas', Schemas);
 
 Schemas.Unit = new SimpleSchema({
+  // Faculty – teacher or teachers of class.
   faculty: {
     type: String,
   },
   subject_group: {
     type: String,
+    autoform: {
+      type: 'select-radio',
+      options: {
+        interdiciplinary: 'Interdisciplinary',
+        arts: 'Arts',
+        design: 'Design',
+        health_and_pe: 'Health and Physical Education',
+        individuals_and_society: 'Individuals and Society',
+        language_acquisition: 'Language Acquisition',
+        language_and_literature: 'Language and Literature',
+        mathematics: 'Mathematics',
+        sciences: 'Sciences',
+      }
+    },
   },
   discipline: {
     type: String,
@@ -26,6 +41,9 @@ Schemas.Unit = new SimpleSchema({
         1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
       },
     },
+  },
+  teaching_hours: {
+    type: Number,
   },
   // Key Concepts
   key_concept: {
@@ -81,8 +99,8 @@ Schemas.Unit = new SimpleSchema({
       ],
     },
   },
-  // Global Contexts
-  global_contexts: {
+  // Global Context
+  global_context: {
     type: String,
     allowedValues: [
       'identities_and_relationships',
@@ -121,7 +139,7 @@ Schemas.Unit = new SimpleSchema({
   },
   // Inquiry Questions
   factual_questions: {
-    type: String,
+    type: [String],
     autoform: {
       afFieldInput: {
         type: 'textarea',
@@ -129,7 +147,7 @@ Schemas.Unit = new SimpleSchema({
     },
   },
   conceptual_questions: {
-    type: String,
+    type: [String],
     autoform: {
       afFieldInput: {
         type: 'textarea',
@@ -137,7 +155,7 @@ Schemas.Unit = new SimpleSchema({
     },
   },
   debatable_questions: {
-    type: String,
+    type: [String],
     autoform: {
       afFieldInput: {
         type: 'textarea',
@@ -215,6 +233,16 @@ Schemas.Unit = new SimpleSchema({
     },
   },
 });
+
+// Helpers
+
+if (Meteor.isClient) {
+
+  Template.registerHelper('currentFieldValue', function (fieldName) {
+    return AutoForm.getFieldValue('units', fieldName) || 'not selected';
+  });
+
+}
 
 var Collections = {};
 
