@@ -74,6 +74,8 @@ __Criterion D: Evaluation:__
 
 ### Summative Assessment
 
+In this design project the students take the knowledge they have been developing of how modern websites can be used to facilitate and support communities and the technical skills they have explored for creating websites and apply them to the design and prototyping of an actual website for a community of interest to them.
+
 __Criterion A: Investigating & Analyzing:__ Identify a community that can be supported or facilitated by a web site. Describe how the community could communicate or collaborate online.
 
 __Critierion B: Developing Ideas:__ Design a website with at least four pages (home page, plus three others) that implements your communication and/or collaboration ideas.
