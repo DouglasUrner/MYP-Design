@@ -31,6 +31,8 @@ __Global Context:__ Scientific & Technical Innovation – The impact of scienti
 
 __Statement of Inquiry:__ Innovation in web design enables communities on the Internet to communicate and collaborate across physical, political, and cultural boundaries.
 
+The technical innovations that support the functions of the Internet and the World Wide Web have also enabled new forms of collaboration and community.
+
 ### Inquiry Questions
 
 * __Factual:__
