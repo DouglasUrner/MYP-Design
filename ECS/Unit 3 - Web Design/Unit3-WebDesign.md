@@ -1,6 +1,25 @@
 Unit 3: Web Design
 ==================
 
+__Course:__ Exploring Computer Science
+
+Unit plan for the ECS Web Design unit (unit 3) being taught as a Design class as part of an MYP year 4/5 program.
+
+## Resources:
+
+* [Growing Up Online](http://www.pbs.org/wgbh/pages/frontline/kidsonline) – WGBH documentary (2008) on the first generation to the first generation to grow up immersed in an online world.
+
+ Show first three (about 24 minutes total).
+
+ * Living Their Lives Essentially Online (7:35)
+ * A Revolution in Classrooms and Social Life (9:04)
+ * Self Expression, Trying On New Identities (7:17)
+
+ Link contains all sections.
+
+ * Do you have to "keep up" with the Internet?
+ * The report is from 2008. How accurate does it seem to be?
+
 ## Topic:
 
 __Key Concept:__ Communication
