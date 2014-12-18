@@ -30,6 +30,7 @@
         <div class='panel-body'>
           {{afFieldLabelText name='unit_title'}}:
             {{> afFieldInput name='unit_title'}}
+
           {{afFieldLabelText name='subject_group'}}:
             {{> afFieldInput name='subject_group'}}
           {{afFieldLabelText name='discipline'}}:
@@ -119,11 +120,23 @@
           <label class='control-label'>
             {{afFieldLabelText name='summative_assessment'}}:
           </label>
-        </a> {{currentFieldValue 'summative_assessment'}}
+        </a>
+        {{#if afFieldIsInvalid name='summative_assessment'}}
+          <span class="help-inline">
+            {{{afFieldMessage name='summative_assessment'}}}
+          </span>
+        {{else}}
+          {{currentFieldValue 'summative_assessment'}}
+        {{/if}}
       </div>
       <div id='collapse5' class='panel-collapse collapse'>
         <div class='panel-body'>
           {{> afFieldInput name='summative_assessment'}}
+          {{#if afFieldIsInvalid name='summative_assessment'}}
+            <span class="help-block">
+              {{{afFieldMessage name='summative_assessment'}}}
+            </span>
+          {{/if}}
         </div>
       </div>
     </div>

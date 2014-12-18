@@ -186,7 +186,7 @@ Schemas.Unit = new SimpleSchema({
   // Summative Assessment
   summative_assessment: {
     type: String,
-    optional: true,
+    //optional: true,
     autoform: {
       afFieldInput: {
         type: 'textarea',
