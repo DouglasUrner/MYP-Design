@@ -1,6 +1,6 @@
 In principle this application functions as an electronic version of the MYP unit planner. It also takes advantage of having a database behind it to add some features and functionality.
 
-Implementation plans/ideas:
+### Implementation plans/ideas:
 
 * Multiple versions of a unit within the same entry. For example: there could be two versions based on different Key Concepts. Checkboxes allow you to select the components you want to use with your unit. This keeps all of the ideas for the unit organized in one place.
 * You can also enter duplicate units.
@@ -17,3 +17,11 @@ Implementation plans/ideas:
 * Edit for task specific descriptors.
 * Common database for shared components (e.g., for concepts).
 * Tagging (or some other facility) to allow you do things like a search for factual questions in a subject group or discipline or by course name.
+
+### Meteor Packages
+
+* nemo64:bootstrap
+* aldeed:collections2
+* aldeed:autoform (includes simple-schema)
+* aldeed:autoform-select2
+* natestrauser:select2
