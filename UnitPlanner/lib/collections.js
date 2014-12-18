@@ -1,6 +1,7 @@
 // client.js
 
 Schemas = {};
+SimpleSchema.debug = true;
 
 //Template.registerHelper('Schemas', Schemas);
 
@@ -8,6 +9,7 @@ Schemas.Unit = new SimpleSchema({
   // Faculty – teacher or teachers of class.
   faculty: {
     type: String,
+    optional: true,
   },
   subject_group: {
     type: String,
@@ -33,17 +35,22 @@ Schemas.Unit = new SimpleSchema({
     type: String,
   },
   myp_year: {
-    type: Number,
+    type: [Number],
     label: 'MYP Year',
     autoform: {
       type: 'select-checkbox-inline',
-      options: {
-        1: '1', 2: '2', 3: '3', 4: '4', 5: '5',
-      },
+      options: [
+        {label: '1', value: 1},
+        {label: '2', value: 2},
+        {label: '3', value: 3},
+        {label: '4', value: 4},
+        {label: '5', value: 5},
+      ],
     },
   },
   teaching_hours: {
     type: Number,
+    optional: true,
   },
   // Key Concepts
   key_concept: {
@@ -66,7 +73,7 @@ Schemas.Unit = new SimpleSchema({
   },
   // Related Concepts
   related_concepts: {
-    type: String,
+    type: [String],
     allowedValues: [
       'adaption',
       'collaboration',
@@ -131,6 +138,7 @@ Schemas.Unit = new SimpleSchema({
   // Statement of Inquiry
   statement_of_inquiry: {
     type: String,
+    optional: true,
     autoform: {
       afFieldInput: {
         type: 'textarea',
@@ -140,6 +148,7 @@ Schemas.Unit = new SimpleSchema({
   // Inquiry Questions
   factual_questions: {
     type: [String],
+    optional: true,
     autoform: {
       afFieldInput: {
         type: 'textarea',
@@ -148,6 +157,7 @@ Schemas.Unit = new SimpleSchema({
   },
   conceptual_questions: {
     type: [String],
+    optional: true,
     autoform: {
       afFieldInput: {
         type: 'textarea',
@@ -156,6 +166,7 @@ Schemas.Unit = new SimpleSchema({
   },
   debatable_questions: {
     type: [String],
+    optional: true,
     autoform: {
       afFieldInput: {
         type: 'textarea',
@@ -165,6 +176,7 @@ Schemas.Unit = new SimpleSchema({
   // Objectives
   objectives: {
     type: String,
+    optional: true,
     autoform: {
       afFieldInput: {
         type: 'textarea',
@@ -174,6 +186,7 @@ Schemas.Unit = new SimpleSchema({
   // Summative Assessment
   summative_assessment: {
     type: String,
+    optional: true,
     autoform: {
       afFieldInput: {
         type: 'textarea',
@@ -183,6 +196,7 @@ Schemas.Unit = new SimpleSchema({
   sa_relationship_to_soi: {
     type: String,
     label: 'Relationship between assessment and SOI',
+    optional: true,
     autoform: {
       afFieldInput: {
         type: 'textarea',
@@ -192,6 +206,7 @@ Schemas.Unit = new SimpleSchema({
   // Approaches to Learning
   approaches_to_learning: {
     type: String,
+    optional: true,
     autoform: {
       afFieldInput: {
         type: 'textarea',
@@ -201,6 +216,7 @@ Schemas.Unit = new SimpleSchema({
   // Content
   content: {
     type: String,
+    optional: true,
     autoform: {
       afFieldInput: {
         type: 'textarea',
@@ -210,6 +226,7 @@ Schemas.Unit = new SimpleSchema({
   // Learning Process
   learning_experiences_and_teaching_strategies: {
     type: String,
+    optional: true,
     autoform: {
       afFieldInput: {
         type: 'textarea',
@@ -218,6 +235,7 @@ Schemas.Unit = new SimpleSchema({
   },
   formative_assessment: {
     type: String,
+    optional: true,
     autoform: {
       afFieldInput: {
         type: 'textarea',
@@ -226,6 +244,7 @@ Schemas.Unit = new SimpleSchema({
   },
   differentiation: {
     type: String,
+    optional: true,
     autoform: {
       afFieldInput: {
         type: 'textarea',
